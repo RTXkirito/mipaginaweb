@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .comentarios {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .comentario {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .comentario p {
+      margin: 0;
+    }
+
+    .formulario-comentario {
+      margin-top: 20px;
+    }
+
+    .formulario-comentario textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .formulario-comentario button {
+      padding: 8px 15px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-    
+  
+    <div class="formulario-comentario">
+      <h3>Deja un comentario</h3>
+      <form action="ruta_de_procesamiento_de_comentario" method="post">
+        <textarea name="comentario" rows="4" placeholder="Escribe tu comentario..."></textarea>
+        <button type="submit">Comentar</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
