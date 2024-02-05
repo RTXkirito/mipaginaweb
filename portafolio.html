@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+            margin-right: 20px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/actividades/css/imagenesimagen/kirito.jpg" alt="Foto de perfil" class="profile-pic">
+            <h1>Kevin Kun</h1>
+            <div class="dropdown">
+                <button class="dropbtn">html</button>
+                <div class="dropdown-content">
+                    <a href="./actividades/actividades.html">Trabajo 1</a>
+                    
+                    
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">css</button>
+                <div class="dropdown-content">
+                    <a href="./actividades/actividadescss.html">Trabajo 1</a>
+                   
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Trabajos</button>
+                <div class="dropdown-content">
+                    <a href="./trabajos1.html">Trabajo 1</a>
+                    
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Estudios</button>
+                <div class="dropdown-content">
+                    <a href="/estudios1.html">Estudios Básicos cocina </a>
+                    <a href="#">Estudios Avanzados</a>
+                </div>
+            </div>
+        </div>
+        <h2>Trabajos cocinero</h2>
+        <p>experiencia en el mundo de la cocina y atencion al cliente.</p>
+        <h2>Estudios cocina </h2>
+        <p>estudios sobre presentacion de platos y presentacion al publico .</p>
+        <h2>Estudios informatica </h2>
+        <p>estudios y conocimientos sobre montage y mantenimiento de equipos y desarroyo de apps .</p>
+    </div>
+</body>
+</html>
