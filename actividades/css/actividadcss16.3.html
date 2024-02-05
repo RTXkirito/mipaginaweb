@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lista dentro de un rectángulo azul vertical</title>
+
+  <style>
+    .contenedor {
+      width: 200px;
+      background-color: rgb(50, 105, 214);
+      color: white;
+      padding: 10px;
+    }
+
+    .lista {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .celda {
+      padding: 5px 10px;
+      border-bottom: 1px solid rgb(0, 0, 0);
+    }
+
+    .celda:last-child {
+      border-bottom: none;
+    }
+  </style>
+
 </head>
 <body>
-    
+
+  <div class="contenedor">
+    <ul class="lista">
+      <li class="celda">Leche</li>
+      <li class="celda">Sal</li>
+      <li class="celda">Agua</li>
+    </ul>
+  </div>
+
 </body>
 </html>
