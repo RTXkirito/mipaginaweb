@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Imagen con borde discontinuo</title>
+
+  <style>
+    .imagen-con-borde {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .imagen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .borde {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: 5px solid red;
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    .borde-discontinuo {
+      border-style: dashed;
+    }
+
+    .borde-discontinuo-vertical {
+      height: 100%;
+      width: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+
 </head>
 <body>
-    
+
+  <div class="imagen-con-borde">
+    <img class="imagen" src="/actividades/css/imagenesimagen/10-monstruo.png" alt="Imagen con borde discontinuo">
+    <div class="borde borde-discontinuo borde-discontinuo-horizontal"></div>
+    <div class="borde borde-discontinuo borde-discontinuo-vertical"></div>
+  </div>
+
 </body>
+
 </html>
