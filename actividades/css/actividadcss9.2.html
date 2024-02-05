@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+        <style>
+        .step {
+          position: relative;
+          margin-bottom: 1rem;
+        }
+      
+        .step::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -20px;
+          width: 20px;
+          height: 100%;
+          background-color: #f0f0f0;
+        }
+      
+        .step:nth-child(odd)::before {
+          background-color: #e0e0e0;
+        }
+      
+        .step:nth-child(even)::before {
+          background-color: #d0d0d0;
+        }
+      </style>
 </head>
-<body>
-    
+<body>      
+      <div class="step">
+        <p>Vivimos tiempos en que los hombres pueden arponear impunemente a las ballenas. A despecho de todos los ecologistas del mundo, las localizan por medio del radar, consiguen incluso algunas veces la complicidad de un hidroavión y luego, para dar muerte al enorme mamífero que emerge a lo lejos, tienen suficiente ya con apretar el gatillo desde la cubierta del barco homicida. Ni siquiera les tiembla el pulso.</p>
+      </div>
+      
+      <div class="step">
+        <p>Fue en uno de esos lances, por ejemplo, donde el enigmático protagonista de esta novela, el capitán Ahab, perdió una pierna, la sustituyó por otra de marfil y concibió un odio mortal hacia aquella colosal ballena blanca y solitaria que sembraba el terror por mares sin civilizar.</p>
+      </div>
+      
+      <div class="step">
+        <p>Seamos cautos y no aventuremos hipótesis precipitadas. Puede que la mutilación de Ahab no tuviese nada que ver porque todos sabemos que hay odios que encuentran sus más secretas motivaciones mucho más allá de las cosas que han sucedido en este mundo y que actúan sobre nosotros a nivel inconsciente.</p>
+      </div>
 </body>
 </html>

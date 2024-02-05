@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Clock</title>
+  <style>
+    #clock {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background-color: #333;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    #clock:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    .hand {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      transform: translate(-50%, -50%) rotate(0deg);
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    .hour-hand {
+      width: 10px;
+      height: 80px;
+      background-color: #f00;
+    }
+
+    .minute-hand {
+      width: 6px;
+      height: 100px;
+      background-color: #0f0;
+    }
+
+    .second-hand {
+      width: 4px;
+      height: 120px;
+      background-color: #00f;
+    }
+  </style>
 </head>
 <body>
-    
+  <div id="clock">
+    <div class="hand hour-hand"></div>
+    <div class="hand minute-hand"></div>
+    <div class="hand second-hand"></div>
+  </div>
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const seconds = now.getSeconds();
+      const minutes = now.getMinutes();
+      const hours = now.getHours();
+
+      const hourRotation = 30 * hours + minutes / 2;
+      const minuteRotation = 6 * minutes;
+      const secondRotation = 6 * seconds;
+
+      document.querySelector(".hour-hand").style.transform = `rotate(${hourRotation}deg)`;
+      document.querySelector(".minute-hand").style.transform = `rotate(${minuteRotation}deg)`;
+      document.querySelector(".second-hand").style.transform = `rotate(${secondRotation}deg)`;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
 </body>
 </html>

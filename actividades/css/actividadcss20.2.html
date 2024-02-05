@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal con duplicación</title>
+  <style>
+    .modal {
+      display: inline-block;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      transition: transform 0.3s ease;
+    }
+
+    .modal:hover {
+      transform: scale(2);
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="modal">
+    <h2>Modal</h2>
+    <p>Contenido del modal</p>
+  </div>
 </body>
 </html>

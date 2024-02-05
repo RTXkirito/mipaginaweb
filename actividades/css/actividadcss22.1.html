@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Eclipse</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .sun,
+    .moon {
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .sun {
+      background-color: #ffdd00;
+      width: 150px;
+      height: 150px;
+      z-index: 1;
+    }
+
+    .moon {
+      background-color: #0099cc;
+      width: 120px;
+      height: 120px;
+      animation: eclipse 10s infinite;
+      z-index: 2;
+    }
+
+    @keyframes eclipse {
+      0% {
+        transform: translateY(-50%) translateX(-50%) scale(1);
+        opacity: 1;
+      }
+      25% {
+        transform: translateY(-50%) translateX(-50%) scale(2);
+        opacity: 1;
+      }
+      30% {
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(-50%) translateX(-50%) scale(3);
+        opacity: 0;
+      }
+      55% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-50%) translateX(-50%) scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="sun"></div>
+  <div class="moon"></div>
 </body>
 </html>

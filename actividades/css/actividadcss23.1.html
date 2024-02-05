@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Hover Effect</title>
+  <style>
+    .image-container {
+      perspective: 800px;
+    }
+
+    .image-container img {
+      transition: transform 0.5s;
+    }
+
+    .image-container:hover img {
+      transform: rotateY(15deg) rotateX(15deg) scale(1.1);
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="image-container">
+    <img src="/activitats/css/23_3D/imagen/BREED Hero_0105_retriever_flat_coated.jpg" alt="Image">
+  </div>
 </body>
 </html>

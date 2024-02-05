@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .t {
+            font-style: normal;
+            color: black; /*falta poner la negrita*/
+        }
+
+        .b {
+            font-size: medium;
+            font-style: italic;
+            font-weight: 300;
+            color: green;
+            letter-spacing: 0.5rem;
+        }
+
+        .m {
+            font-weight: bold;
+            color: blue;
+        }
+
+        .n {
+            font-size: small;
+            font-style:oblique;
+            font-weight: 100;
+            color: black; 
+        }
+        p {
+            text-align: justify;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        h4 {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        function cambiarEstil() {
+            document.getElementById("t").style.fontStyle = "italic";
+            document.getElementById("t").style.color = "blue";
+        }
+        
+        function resetearEstil() {
+            document.getElementById("t").style.fontStyle = "normal";
+            document.getElementById("t").style.color = "black";
+        }
+
+        function cambiarEstilo() {
+            document.getElementById("m").style.weigth = "bold";
+            document.getElementById("m").style.color = "red";
+        }
+        
+        function resetearEstilo() {
+            document.getElementById("m").style.weigth = "normal";
+            document.getElementById("m").style.color = "blue";
+        }
+    </script>
 </head>
 <body>
-    
+    <h1 id="t" onmouseover="cambiarEstil()" onmouseout="resetearEstil()">Moby Dick</h1>
+    <h2><span class="b">Herman Melville</span></h2>
+    <h4 id="m" onmouseover="cambiarEstilo()" onmouseout="resetearEstilo()">Prólogo</h4>
+    <p><span class="n">Vivimos tiempos en que los hombres pueden arponear impunemente a las ballenas. A despecho de todos los ecologistas del mundo, las localizan por medio del radar, consiguen incluso algunas veces la complicidad de un hidroavión y luego, para dar muerte al enorme mamífero que emerge a lo lejos, tienen suficiente ya con apretar el gatillo desde la cubierta del barco homicida. Ni siquiera les tiembla el pulso.<br>Hubo otras épocas, sin embargo, en las que no lo tuvieron tan fácil. Los marineros embarcaban entonces en incómodos veleros, arriaban precipitadamente los botes, remaban sin descanso hacia donde estaba la ballena y, cuando la tenían a tiro, lanzaban los crueles arpones y confiaban en su buena suerte.</span></p>
 </body>
 </html>

@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .chat {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .message {
+      margin-bottom: 10px;
+    }
+    .message .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ccc;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .message .name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .message .date {
+      font-size: 12px;
+      color: #999;
+    }
+    .message .message-text {
+      padding: 5px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="chat">
+    <ul>
+      <li class="message">
+        <div class="avatar"></div>
+        <div class="message-content">
+          <span class="name">Persona 1</span>
+          <span class="date">12:34</span>
+          <p class="message-text">Hola, ¿cómo estás?</p>
+        </div>
+      </li>
+      <li class="message">
+        <div class="avatar"></div>
+        <div class="message-content">
+          <span class="name">Persona 2</span>
+          <span class="date">12:35</span>
+          <p class="message-text">Hola, estoy bien. ¿Y tú?</p>
+        </div>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
