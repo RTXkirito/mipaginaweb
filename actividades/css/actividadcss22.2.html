@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferris Wheel</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    .ferris-wheel {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #0099cc;
+    }
+
+    .ferris-wheel::before,
+    .ferris-wheel::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background-color: #ffdd00;
+    }
+
+    .ferris-wheel::before {
+      top: 30px;
+      left: 30px;
+      width: 240px;
+      height: 240px;
+      clip-path: polygon(50% 0%, 100% 35%, 100% 65%, 50% 100%, 0% 65%, 0% 35%);
+      animation: rotate 10s infinite linear;
+    }
+
+    .ferris-wheel::after {
+      top: 100px;
+      left: 100px;
+      width: 100px;
+      height: 100px;
+      background-color: #ffdd00;
+      border-radius: 50%;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
-    
-</body>
-</html>
+  <div class="ferris-wheel"></div>
+</body

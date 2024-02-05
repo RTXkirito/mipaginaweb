@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendulum Animation</title>
+  <style>
+    .pendulum {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .pendulum:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      transform: translate(-50%, 50%) rotate(-20deg);
+      width: 10px;
+      height: 100px;
+      background-color: #f00;
+      border-radius: 10px 10px 0 0;
+      animation: pendulum 2s linear infinite;
+    }
+
+    @keyframes pendulum {
+      0% {
+        transform: translate(-50%, 50%) rotate(-20deg);
+      }
+      50% {
+        transform: translate(-50%, -50%) rotate(20deg);
+      }
+      100% {
+        transform: translate(-50%, 50%) rotate(-20deg);
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="pendulum"></div>
 </body>
 </html>
